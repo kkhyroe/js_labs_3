@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+.crot {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+
+    background-color: darkslategray;
+}
+
+#crot1, #crot2, #crot3, #crot4, #crot5, #crot6, #crot7, #crot8, #crot9 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+
+    display: flex;
+}
