@@ -1,0 +1,138 @@
+<div class="container">
+  <div
+    class="card"
+    *ngFor="let det of dets; let id = index"
+    [ngClass]="{
+      offline: det.status === false
+    }"
+  >
+    <h3>{{ id }}</h3>
+    <p>{{ det.name }}</p>
+    <button class="btn btn-primary" (click)="det.status = false">Delete</button>
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="detector" #someInput />
+    <button class="btn btn-primary" (click)="newDet(someInput.value)">Add a card</button>
+  </div>
+</div>
+
+
+<!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="col-12">&ndash;&gt;-->
+<!--&lt;!&ndash;      <h1>Hello</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash; интерполяция &ndash;&gt;-->
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-12">-->
+<!--      <h1>{{ title }}</h1>-->
+<!--      <h1>10 + 20 = {{ 10 + 20 }}</h1>-->
+<!--      <h1>Number: {{ myNumber }}</h1>-->
+<!--      <h1>{{ hello() }}</h1>-->
+<!--      <h1>Flag {{ flag === true ? 'on' : 'off' }}</h1>-->
+<!--      <h1>{{ title.toUpperCase() }}</h1>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<hr>-->
+
+<!--&lt;!&ndash;привязка свойств&ndash;&gt;-->
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-12">-->
+<!--      <button class="btn btn-primary" [disabled]="!buttonEnable">-->
+<!--        Button-->
+<!--      </button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<hr>-->
+
+<!--&lt;!&ndash; привязка событий &ndash;&gt;-->
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-12">-->
+<!--      <div class="myblock" (mousemove)="getCoords($event)"></div>-->
+<!--      <p>X: {{ blockX }} Y: {{ blockY }}</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<hr>-->
+
+<!--&lt;!&ndash; привязка в оба направления &ndash;&gt;-->
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-12">-->
+<!--      <div class="form-group">-->
+<!--        <input type="text" class="form-control" [(ngModel)]="inputValue" />-->
+<!--      </div>-->
+<!--      <p>{{ inputValue }}</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<hr>-->
+
+<!--&lt;!&ndash;локальная референция&ndash;&gt;-->
+<!--&lt;!&ndash; viewchild &ndash;&gt;-->
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-12">-->
+<!--      <div class="form-group">-->
+<!--        <input type="text" class="form-control" #someInput />-->
+<!--      </div>-->
+<!--      <button class="btn btn-primary" (click)="getData(someInput)">Button</button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<hr>-->
+
+<!--&lt;!&ndash;условные операторы&ndash;&gt;-->
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-12">-->
+<!--      <p *ngIf="flag === true">Flag on</p>-->
+<!--      <p *ngIf="flag === false">Flag off</p>-->
+
+<!--      <ng-container *ngIf="flag === true"; else elseTemplate>-->
+<!--        <p>Flag on</p>-->
+<!--      </ng-container>-->
+<!--      <ng-template #elseTemplate>-->
+<!--        <p>Flag off</p>-->
+<!--      </ng-template>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<hr>-->
+
+<!--&lt;!&ndash; циклы &ndash;&gt;-->
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div-->
+<!--      class="col-3"-->
+<!--      *ngFor="-->
+<!--        let item of someArray;-->
+<!--        let item_index = index;-->
+<!--        let item_first = first;-->
+<!--        let item_last = last-->
+<!--      "-->
+<!--    >-->
+<!--      {{ item_index + 1 }}: {{ item }}-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<hr>-->
+
+<!--&lt;!&ndash; динамические стили и css-классы &ndash;&gt;-->
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-12">-->
+<!--      <p [style.font-size]="fontSize + 'px'">Some text</p>-->
+<!--      <p [ngStyle]="{ 'font-size': fontSize + 'px' }" [ngClass]="{ 'color-green': buttonEnable }">Some text</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
